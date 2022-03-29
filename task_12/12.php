@@ -4,6 +4,7 @@ function getSameParity($arr)
 {
     if (empty($arr)) {
         echo '[]';
+        exit();
     }
     if ($arr[0] % 2 == 0) {
         foreach ($arr as $item) {
@@ -21,4 +22,4 @@ function getSameParity($arr)
     }
 }
 
-getSameParity([2, 2, 3, 4, 5, 6]);
+getSameParity([1, 2, 3, 4, 5, 6]);
