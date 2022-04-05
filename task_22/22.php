@@ -1,6 +1,6 @@
 <?php
 
-function getIN($arr, $key)
+function getIn($arr, $key)
 {
     foreach ($key as $value) {
         if (array_key_exists($value, $arr)) {
@@ -10,7 +10,7 @@ function getIN($arr, $key)
     echo $arr;
 }
 
-getIN([
+getIn([
     'user' => 'ubuntu',
     'hosts' => [
         ['name' => 'web1'],

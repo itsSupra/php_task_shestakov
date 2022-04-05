@@ -1,10 +1,8 @@
 <?php
 
-function addPrefix($names, $prefix)
-{
-    foreach ($names as $item) {
-        echo $prefix . PHP_EOL . $item . PHP_EOL;
-    }
-}
+declare(strict_types=1);
+require_once "App/Arrays/AddPrefix.php";
 
-addPrefix(['john', 'smith', 'karl'], 'Mr');
+use function App\Arrays\AddPrefix;
+
+print_r(addPrefix(['john', 'smith', 'karl'], 'Mr'));

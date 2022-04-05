@@ -1,19 +1,7 @@
 <?php
-function reverse(int $num)
-{
+declare(strict_types=1);
+require_once "Number/Number.php";
 
-    $input = str_split($num);
+use function Number\reverse;
 
-    $reverse= [];
-
-    for ($i = sizeof($input) - 1; $i >= 0; $i--) {
-        if ($input[0] == "-") {
-            $reverse[0] = "-";
-        }
-        $reverse[] = $input[$i];
-    }
-
-    return (int)$return = implode("", $reverse);
-}
-
-echo reverse(-256);
+print_r(reverse(123));

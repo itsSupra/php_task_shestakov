@@ -1,17 +1,9 @@
 <?php
 
-function makeCensored($text, $cens = [])
-{
-    $res = [];
-    $arr = explode(' ', $text);
-    for ($i = 0; $i < count($arr); $i++) {
-        if (in_array($arr[$i], $cens)) {
-            $arr[$i] = '$#%!';
-            $res = $arr[$i];
-        } else $res = $arr[$i];
-        echo $res . PHP_EOL;
-    }
-}
+declare(strict_types=1);
+require_once "App/Strings/makeCensored.php";
+
+use function App\Strings\makeCensored;
 
 
 makeCensored('chicken chicken? chicken! chicken', ['?', 'chicken']);

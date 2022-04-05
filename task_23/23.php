@@ -1,20 +1,17 @@
 <?php
 
-function pick($data, $key)
+function pick($arr, $key)
 {
-    $res = [];
-    print_r($data);
-    for ($i = 0; $i < count($data); $i++) {
-        for ($j = 0; $i < count($key); $j++) {
-            if ($data[$i] == $key[$j]) {
-                $res[] = $data;
-            }
+    $arr1 = [];
+    foreach ($arr as $value => $v) {
+        if (in_array($value, $key)) {
+            $arr1[$value] = $v;
         }
-        print_r($res);
     }
+    print_r($arr1);
 }
 
-pick($data = [
+pick($arr = [
     'user' => 'ubuntu',
     'cores' => 4,
     'os' => 'linux'], ['user', 'os']);
